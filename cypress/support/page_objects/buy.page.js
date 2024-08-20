@@ -1,0 +1,35 @@
+class BuyPage {
+
+    buy(parametros ){
+        cy.get('#primary-menu > .menu-item-629 > a').click()
+        cy.get('.post-2559 > .product-block > .block-inner > .image > .product-image > .image-hover').click()
+        cy.get('.button-variable-item-M').click()
+        cy.get('.button-variable-item-Red').click()
+        cy.get('.input-text').clear().type('1')
+        cy.get('.single_add_to_cart_button').click()
+        cy.get('#primary-menu > .menu-item-629 > a').click()
+        cy.get('.post-3964 > .product-block > .block-inner > .image > .product-image > .image-hover').click()
+        cy.get('.button-variable-item-S').click()
+        cy.get('.button-variable-item-Purple').click()
+        cy.get('.single_add_to_cart_button').click()
+        cy.get('#primary-menu > .menu-item-629 > a').click()
+        cy.get(':nth-child(3) > .page-numbers').click()
+        cy.get('.post-3745 > .product-block > .block-inner > .image > .product-image > .image-hover').click()
+        cy.get('.button-variable-item-L').click()
+        cy.get('.button-variable-item-Green').click()
+        cy.get('.single_add_to_cart_button').click()
+        cy.get('#primary-menu > .menu-item-629 > a').click()
+        cy.get(':nth-child(7) > .page-numbers').click()
+        cy.get('.post-3006 > .product-block > .block-inner > .image > .product-image > .image-hover').click()
+        cy.get('.button-variable-item-36').click()
+        cy.get('.button-variable-item-Blue').click()
+        cy.get('.single_add_to_cart_button').click()
+        cy.get('.woocommerce-message > .button').click()
+        cy.get('.checkout-button').click()
+        cy.get('#terms').click()
+      //  cy.get('.woocommerce-terms-and-conditions-wrapper > .form-row').find('[type="checkbox"]').check()
+        cy.get('#place_order').click()
+    }
+}
+
+export default new BuyPage()
