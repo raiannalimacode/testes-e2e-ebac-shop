@@ -1,6 +1,8 @@
 /// <reference types="cypress" />
 import BuyPage from "../support/page_objects/buy.page";
 
+const dataBuy = require('../fixtures/buy.json')
+
 context('Exercicio - Testes End-to-end - Fluxo de pedido', () => {
     /*  Como cliente 
         Quero acessar a Loja EBAC 
@@ -18,9 +20,16 @@ context('Exercicio - Testes End-to-end - Fluxo de pedido', () => {
     });
 
     it.only('Deve fazer um pedido na loja Ebac Shop de ponta a ponta', () => {
-        BuyPage.buy()
+        BuyPage.buy(
+            dataBuy[0].size, 
+            dataBuy[0].color,
+            dataBuy[0].size2,
+            dataBuy[0].color2,
+            dataBuy[0].size3,
+            dataBuy[0].color3,
+            dataBuy[0].size4,
+            dataBuy[0].color4
+        )
         cy.get('.page-title').should('contain', 'Pedido recebido')
     });
-
-
 })
